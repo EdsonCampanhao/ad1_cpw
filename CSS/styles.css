@@ -1,0 +1,60 @@
+body{
+    width: 50%;
+    margin: auto;
+}
+.ender {
+    background-color: #EEBB88;
+    width: 640px;
+    display: flex;
+    margin:0 auto;
+    padding: 0 8px;
+    border-radius: 10px 10px 0 0;
+    justify-content: space-between;
+    align-items: center;
+    font-family:  "karla","Verdana","Ubuntu";
+    color: #402020;
+    text-align: right;
+}
+.imgLogo{
+    border-bottom: 3px solid #402020;
+    padding-bottom: 16px;
+}
+
+
+
+.container_content{
+    background-color: #EEBB88;
+    width: 640px;
+    display: flex;
+    margin:0 auto;
+    padding: 0 8px;
+    border-radius:0 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.apres{
+    width: 30%;
+    font-family:  "karla","Verdana","Ubuntu";
+}
+ul{
+    list-style: circle;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px ;
+
+    
+}
+a{
+    color: #402020;
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+   font-family:  "stoke","Lucida Bright","liberation";
+}
