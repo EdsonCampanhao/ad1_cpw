@@ -1,0 +1,78 @@
+html{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+body{
+    margin: auto;
+    font-size: 16px;
+    background-color: #EEBB88;
+    color: #402020;
+}
+header { 
+    display:block; margin-bottom: 1px; 
+}
+.imgLogo{
+    border-bottom: 3px solid #402020;
+    margin-bottom: 6px;
+    padding-bottom: 15px;
+}
+.ender {
+    float: right;
+    text-align: right;
+    line-height: 140%;
+    font-size: 14px;
+    font-family:  "karla","Verdana","Ubuntu";
+}
+nav { 
+    display:block; width: 20%; float: left; 
+}
+ul{
+    color:  #332277;
+    list-style: circle;
+    line-height: 230%;
+    margin-top: 40px;    
+    font-family:  "karla","Verdana","Ubuntu";
+}
+a{
+    color: #603030;
+    text-decoration: none;
+}
+a:visited{
+    color: #603030;
+}
+section { 
+    display:block; width: 70%; float: right; 
+}
+.apres{
+   font-size: 16px;
+   font-family:  'Stoke','Lucida Bright','Liberation';
+}
+.titulo{
+    text-align: center;
+}
+.listaMaq{
+    width:340px;
+    color: #402020;
+    background-color: #eeddcc;
+    padding: 10px 10px 10px 50px;
+    border: #402020 solid 2px;
+    margin: 0 auto 10px auto;
+    list-style: upper-roman;
+}
+.listaMaq ul{
+    margin-top: 0;
+    line-height: 175%;
+    color: #402020;
+    list-style: square;
+    padding: 0;
+}
+.listaMaq ul li{
+    margin-left: 32px;
+    
+}
+.preco{
+    color: #cc0000;
+}
+
+
