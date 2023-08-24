@@ -1,0 +1,40 @@
+.tabCap{ 
+    margin-top: 6px;
+    white-space: nowrap;
+    border: 1px solid;
+    border-collapse: collapse;
+    font-size: 15px;
+    background-color: #eeddcc;
+    color: #402020;
+    font-family:  "karla","Verdana","Ubuntu";
+
+}
+.tabCap th{
+    border: 3px solid #888888;
+    padding:6px 12px 6px 12px;
+}
+.tabCap td{
+    border: 3px solid #000066;
+    padding:6px 12px 6px 12px;
+}
+.linTh{
+    color:#ffffff;
+    background-color:#402020;
+    vertical-align: middle;
+    text-align: center;
+}
+.colTh{
+    color:#ffffff;
+    background-color:#804040;
+    text-align: left;
+}
+.preco{
+    color: #cc0000;
+}
+.imgcell{
+    background-color: #ffffff;
+}
+.tabCap img{
+    width: 60px;
+    height: 60px;
+}
