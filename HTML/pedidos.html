@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Espuma Era Lei</title>
+    <link rel="stylesheet" href="../CSS/cafeteiras.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Stoke&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="imgLogo" src="../Imagens/EspumaEraLeiTopo.png" alt=" logo da empresa">
+        <p  class="ender">Via Expressa, 126 <br> tel:(21) 91122-3344 <br> contato@espumeralei.com.br</p>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Apresentacao</a>
+                </li>
+                <li>
+                    <a href="./HTML/cafeteiras.html">Cafeteiras</a>
+                </li>
+                <li>
+                    <a href="./HTML/capsulas.html">Capsulas </a>
+                </li>
+                <li>
+                    <a href="./HTML/Pedidos.html">Pedidos</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="apres">
+         <form action="get" class="formBox">
+            <fieldset>
+                <legend>Seleção de produtos e lista de compras</legend>
+                <div class="linhaForm">
+                    <fieldset class="fSLinhaInteira">
+                        <label for="" class="labBox ">Máquinas</label>
+                        <select name="" id="" class="ColEsqSelProd selMaquina">
+                            <optgroup label="Dolce Gusto">
+                                <option value="">Mini Me </option>
+                                <option value="">Genio S Plus </option>
+                            </optgroup>
+                                <optgroup label="Nespresso">
+                                <option value="">Inissia </option>
+                            </optgroup>
+                            <optgroup label="Três Corações">
+                                <option value="">LOV </option>
+                            </optgroup>
+                        </select>
+                        <label for="QTD" class="labBox labBoxQtd">QTD</label>
+                        <input name="QTD" id="QTD" type="number" class="inpBoxMed">
+                    </fieldset>
+                </div>
+                <div class="linhaForm">
+                    <fieldset class="fSLinhaInteira">
+                        <label for="" class="labBox">Cápsulas</label>
+                        <select name="" id="" class="ColEsqSelProd selCapsula">
+                            <optgroup label="tipo Dolce Gusto">
+                                <option value="">Dolce Gusto Espresso </option>
+                                <option value="">Dolce Gusto Intenso </option>
+                            </optgroup>
+                            <optgroup label="Tipo Três Corações">
+                                <option value="">Forza/Vibrante </option>
+                            </optgroup>
+                            <optgroup label="Tipo Nespresso">
+                                <option value="">Três Cor. Intenso </option>
+                                <option value="">Lor Forza </option>
+                            </optgroup>
+                        </select>
+                        <label for="QTD" class="labBox labBoxQtd">QTD</label>
+                        <input name="QTD" id="QTD" type="number" class="inpBoxMed">
+                    </fieldset>
+                </div>
+                <div class="linhaForm">
+                    <div class="colEsq">
+                    <label for="" class="labBox colEsqValUnit">Valor Unitário: R$</label>
+                    <input type="text" class="inpBoxMed">
+                    </div>
+                    <div class="colDir">
+                        <button>Incluir Produtos</button>
+                    </div>
+                </div>
+                <textarea name="" id="" cols="30" class="lisPedArea" rows="10"></textarea>
+                <div class="linhaForm">
+                    <div class="colEsq">
+                    <label for="" class="labBox InpBoxMedLeft">Valor Total R1</label>
+                    <input type="value" value="" class="inpBoxMed">
+                    </div>
+                </div>
+            </fieldset>
+            <div>
+                <button>Continuar</button>
+                <button>Limpar</button>
+            </div>
+         </form>
+        </section>
+    </main>
+</body>
