@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla&family=Stoke&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/pedidos.css">
+    
 </head>
 
 <body>
@@ -36,74 +37,75 @@
             </ul>
         </nav>
         <section class="apres">
-            <form action="get" class="formBox">
+            <form action="pagamento.html" method="get" class="formBox">
                 <fieldset>
                     <legend>Seleção de produtos e lista de compras</legend>
                     <div class="linhaForm">
                         <div class="containerProdutos">
-                            <label for="" class=" LabBoxSel">Máquinas</label>
-                            <select name="" id="" class="ColEsqSelProd selMaquina">
+                            <label for="maquinas" class=" LabBoxSel">Máquinas</label>
+                            <select  id="maquinas" >
                                 <optgroup label="Dolce Gusto">
-                                    <option value="">Mini Me </option>
-                                    <option value="">Genio S Plus </option>
+                                    <option value="">----</option>
+                                    <option value="Mini ME">Mini Me </option>
+                                    <option value="Genio S Plus">Genio S Plus </option>
                                 </optgroup>
                                 <optgroup label="Nespresso">
-                                    <option value="">Inissia </option>
+                                    <option value="Inissia">Inissia </option>
                                 </optgroup>
                                 <optgroup label="Três Corações">
-                                    <option value="">LOV </option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div  class="containerQtd">
-                            <label for="QTD" class=" ">Qtd</label>
-                            <input name="QTD" id="QTD" type="number" class="inpBoxMed">
-                        </div>
-                    </div>
-                    <div class="linhaForm">
-                        <div  class="containerProdutos">
-                            <label for="" class="">Cápsulas</label>
-                            <select name="" id="" class="ColEsqSelProd selCapsula">
-                                <optgroup label="tipo Dolce Gusto">
-                                    <option value="">Dolce Gusto Espresso </option>
-                                    <option value="">Dolce Gusto Intenso </option>
-                                </optgroup>
-                                <optgroup label="Tipo Três Corações">
-                                    <option value="">Forza/Vibrante </option>
-                                </optgroup>
-                                <optgroup label="Tipo Nespresso">
-                                    <option value="">Três Cor. Intenso </option>
-                                    <option value="">Lor Forza </option>
+                                    <option value="LOV">LOV </option>
                                 </optgroup>
                             </select>
                         </div>
                         <div class="containerQtd">
                             <label for="QTD"  >Qtd</label>
-                            <input name="QTD" id="QTD" type="number" class="inpBoxMed">
+                            <input name="QTD" id="QTD_maquinas" type="number" >
                         </div>
                     </div>
                     <div class="linhaForm">
-                        <div class="colEsq">
-                            <label for="" class=" colEsqValUnit">Valor Unitário: R$</label>
-                            <input type="text" class="inpBoxMed">
+                        <div class="containerProdutos">
+                            <label for="capsulas" >Cápsulas</label>
+                            <select  id="capsulas">
+                                <optgroup label="tipo Dolce Gusto">
+                                    <option value="">----</option>
+                                    <option  value="Espresso">Dolce Gusto Espresso </option>
+                                    <option  value="Intenso">Dolce Gusto Intenso </option>
+                                </optgroup>
+                                <optgroup label="Tipo Três Corações">
+                                    <option  value="Forza / Vibrante">Forza/Vibrante </option>
+                                </optgroup>
+                                <optgroup label="Tipo Nespresso">
+                                    <option  value="Três cor. intenso" >Três Cor. Intenso </option>
+                                    <option  value="Lor Forza" >Lor Forza </option>
+                                </optgroup>
+                            </select>
                         </div>
-                        <div class="colDir">
-                            <button>Incluir Produtos</button>
+                        <div class="containerQtd">
+                            <label for="QTD">Qtd</label>
+                            <input name="QTD"  id="QTD_capsulas" type="number">
                         </div>
                     </div>
-                    <textarea name="" id="" cols="30" class="lisPedArea boxPedidos" rows="10"></textarea>
+                    <div class="linhaAction">
+                        <div class="linhaAction_valueField">
+                            <label for="valorParcial" >Valor parcial da compra: R$</label>
+                            <input id="valorParcial" readonly value=0 type="number">
+                        </div>
+                        <button class="incluirProdutos" id="incluirProdutos" >Incluir Produtos</button>
+                    </div>
+                    <textarea name="" id="boxPedidos" cols="30" class="boxPedidos" rows="8"></textarea>
                     <div class="linhaForm">
-                        <div class="colEsq">
-                            <label for="" class=" InpBoxMedLeft">Valor Total R1</label>
-                            <input type="value" value="" class="inpBoxMed">
+                        <div class="valorTotal">
+                            <label for="">Valor Total R$</label>
+                            <input readonly type="number" id="valorTotal" value=0 class="valorTotal_input">
                         </div>
                     </div>
                 </fieldset>
                 <div class="botoes">
-                    <button>Continuar</button>
+                    <button type="submit">Continuar</button>
                     <button>Limpar</button>
                 </div>
             </form>
         </section>
     </main>
+    <script src="../js/index.js"></script>
 </body>

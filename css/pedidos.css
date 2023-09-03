@@ -1,9 +1,8 @@
 .formBox{
     width: 540px;
-    box-sizing: border-box;
     padding: 10px;
     margin-top: 10px;
-    text-align: center;
+    text-align: left;
     background-color: #EEDDCC;
     border: 3px solid #000055;
     font-size: 16px;
@@ -11,6 +10,7 @@
 }
 .linhaForm{
     display: flex;
+    align-items: center;
     width: 100%;
     gap: 16px;
     margin: o;
@@ -22,20 +22,86 @@
     text-align: left;
 }
 .containerProdutos{
-    width: 300px;
+    width: 350px;
     display: flex;
+    gap: 16px;
     align-items: center;
 }
-.ColEsqSelProd{
-    width: 200px;
+.containerProdutos label{
+    width: 73px;
+}
+.containerProdutos select{
+    width: 250px;
     display: flex;
     align-items: center;
+    border-radius: 5px;
+    height: 24px;
 }
-.labBoxQtd{
+.containerQtd{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.containerQtd input{
     width: 40px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.linhaAction{
+    padding: 6px;
     display: flex;
+    justify-content: space-between;
+}
+.linhaAction_valueField{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.linhaAction  input{
+    width: 100px;
+    border: none;
+    height: 26px;
+    border-radius: 5px;
+}
+.linhaAction button{
+    width: 140px;
+    border-radius: 5px;
+    border: none;
+    height: 30px;   
+}
+.boxPedidos{
+    width: 98%;
+    margin: 6px 0;
+}
+.valorTotal{
+    display: flex;
+    gap: 8px;
     align-items: center;
 }
-.inpBoxMed{
-    width: 40px;
+.valorTotal_input{
+    width: 100px;
+    border: none;
+    height: 26px;
+    border-radius: 5px;
+}
+.botoes{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 16px;
+    gap: 8px;
+    margin-top: 32px;
+    border: none;
+}
+.botoes button{
+    padding: 6px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }

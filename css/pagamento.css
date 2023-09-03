@@ -1,0 +1,175 @@
+textarea {
+    border: none;
+}
+
+.formBox {
+    width: 540px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+    background-color: #EEDDCC;
+    border: 3px solid #000055;
+    font-size: 16px;
+    font-family: 'Karla', 'Verdana', 'Ubuntu';
+}
+
+.identificacao {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.linhaForm {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.linhaForm_nome {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.linhaForm_nome label {
+    display: inline-block;
+    width: 90px;
+}
+
+.linhaForm_nome input {
+    flex-grow: 1;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.linhaForm_email {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.linhaForm_email label {
+    width: 90px;
+}
+
+.linhaForm_email input {
+    flex-grow: 1;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+
+div.linhaForm:nth-child(3) {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 16px;
+}
+
+div.linhaForm:nth-child(3) textarea {
+    width: 39%;
+    border: none;
+}
+
+.genero {
+    height: 60px;
+    list-style: circle;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+div.linhaForm:nth-child(4) {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.linhaForm_contatos {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.linhaForm_contatos label {
+    display: inline-block;
+    width: 84px;
+}
+
+.linhaForm_contatos input {
+    width: 35%;
+    height: 23px;
+    border: none;
+    border-radius: 5px;
+}
+
+.linhaForm fieldset {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagamento {
+    display: flex;
+    gap: 16px;
+    align-items: b;
+}
+
+.pagamento_dadosDoPagamento {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 32px;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cartao_bandeiras label,
+.cartao_validade label,
+.cartao_numero label {
+    display: inline-block;
+    width: 80px;
+}
+
+.cartao_validade input,
+.cartao_numero input {
+    height: 24px;
+    width: 110px;
+    border-radius: 5px;
+    border: none;
+}
+
+.valorTotal label {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.valorTotal input {
+    width: 80px;
+    height: 24px;
+    border-radius: 5px;
+    border: none;
+}
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.botoes button {
+
+    padding: 6px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
