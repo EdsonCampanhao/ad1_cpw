@@ -1,4 +1,6 @@
-var dataBase = {
+
+
+let dataBase = {
     "maquinas": {
         "Mini ME": 480.00,
         "Genio S Plus": 530.00,
@@ -12,9 +14,11 @@ var dataBase = {
         "Três cor. intenso": 20.00,
         "Lor Forza": 21.00
     },
-    "pedido": ''
+    "pedido": '',
+    "valorTotal":''
 }
 
+const form = document.getElementById('form')
 const quantidadeMaquinas = document.getElementById('QTD_maquinas')
 const quantidadeCapsulas = document.getElementById('QTD_capsulas')
 const capsulas = document.getElementById('capsulas')
@@ -22,6 +26,7 @@ const maquinas = document.getElementById('maquinas')
 const botaoIncluir = document.getElementById('incluirProdutos')
 const valorParcial = document.getElementById('valorParcial')
 const valorTotal = document.getElementById('valorTotal')
+const botaoEnviar = document.getElementById('submit')
 
 
 function calculaValorCompra(tipoProduto, produto, quantidade) {
@@ -73,6 +78,15 @@ function incluirProdutos(event) {
 function resetaQTD(tipoProduto,produto,quantidade){
     return resetaValorMudado(tipoProduto,produto,quantidade)
 }
+function enviarFormulario(event){
+        if(valorTotal.value==0){
+            event.preventDefault()
+            return alert('selecione pelo menos 1 produto!')
+        }
+
+        
+        
+}
 
 quantidadeCapsulas.addEventListener("keyup", () => { calculaValorCompra('capsulas', capsulas, quantidadeCapsulas) })
 quantidadeMaquinas.addEventListener("keyup", () => { calculaValorCompra('maquinas', maquinas, quantidadeMaquinas) })
@@ -85,3 +99,7 @@ quantidadeCapsulas.addEventListener("click", () => {resetaQTD('capsulas', capsul
 
 
 botaoIncluir.addEventListener('click', incluirProdutos)
+botaoEnviar.addEventListener('click',(event)=>{enviarFormulario(event)})
+
+
+

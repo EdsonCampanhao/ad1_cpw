@@ -37,7 +37,7 @@
             </ul>
         </nav>
         <section class="apres">
-            <form action="pagamento.html" method="get" class="formBox">
+            <form action="pagamento.html" method="get" id="form" class="formBox">
                 <fieldset>
                     <legend>Seleção de produtos e lista de compras</legend>
                     <div class="linhaForm">
@@ -95,17 +95,17 @@
                     <textarea name="" id="boxPedidos" cols="30" class="boxPedidos" rows="8"></textarea>
                     <div class="linhaForm">
                         <div class="valorTotal">
-                            <label for="">Valor Total R$</label>
+                            <label for="valorTotal">Valor Total R$</label>
                             <input readonly type="number" id="valorTotal" value=0 class="valorTotal_input">
                         </div>
                     </div>
                 </fieldset>
                 <div class="botoes">
-                    <button type="submit">Continuar</button>
+                    <button type="submit" id="submit">Continuar</button>
                     <button>Limpar</button>
                 </div>
             </form>
         </section>
     </main>
-    <script src="../js/index.js"></script>
+    <script type="module" src="../js/pedidos.js"></script>
 </body>
