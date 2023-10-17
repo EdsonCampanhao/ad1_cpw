@@ -26,6 +26,7 @@ const botaoIncluir = document.getElementById('incluirProdutos')
 const valorParcial = document.getElementById('valorParcial')
 const valorTotal = document.getElementById('valorTotal')
 const botaoEnviar = document.getElementById('submit')
+const botaoAdd= document.querySelectorAll('.Container__QTD__add')
 
 
 function calculaValorCompra(tipoProduto, produto, quantidade) {
@@ -33,46 +34,42 @@ function calculaValorCompra(tipoProduto, produto, quantidade) {
         return alertaProdutosVazios(quantidade)
     }
 
-    // console.log(produtos)
     let valor = parseFloat(dataBase[tipoProduto][produto.value]) * parseInt(quantidade.value)
-    console.log(valor)
 
-    valorParcial.value =  valor
+    valorParcial.value = valor
 }
 function alertaProdutosVazios(quantidadeSemTexto) {
     alert('preencha o campo de produto')
     quantidadeSemTexto.value = ''
 }
 function resetaValorMudado(tipoProduto) {
-        
+
     if (tipoProduto == 'maquinas') {
         capsulas.selectedIndex = 0
-    }else if (tipoProduto == 'capsulas') {
+    } else if (tipoProduto == 'capsulas') {
         maquinas.selectedIndex = 0
-    }   
-        valorParcial.value = 0
-        quantidadeMaquinas.value=''
-        quantidadeCapsulas.value=''
+    }
+    valorParcial.value = 0
+    quantidadeMaquinas.value = ''
+    quantidadeCapsulas.value = ''
 }
 function incluirProdutos(event) {
     event.preventDefault()
-    let produtos = [maquinas, capsulas]
+
+    let produtoSelecionado= event.target.parentElement.parentElement.children[0].children[1]
     let boxPedidos = document.getElementById('boxPedidos')
     let quantidade = produto => produto.parentElement.nextElementSibling.children[1].value
-    produtos.forEach(produto => {
-        if (quantidade(produto) == '' & produto.value != '') {
-            return alert('por favor digite a quantidade!')
+   
+        if (quantidade(produtoSelecionado) == '') {
+            return alert('nenhum produto selecionado!')
         }
         else if (produto.value != '') {
-            boxPedidos.textContent = boxPedidos.textContent + `${produto.value}: ${produto.parentElement.nextElementSibling.children[1].value} \n`
+            boxPedidos.textContent = boxPedidos.textContent + `${produto.value} (${produto.parentElement.nextElementSibling.children[1].value}) R$ ${valorParcial.value}  \n`
             produto.selectedIndex = 0
-            console.log(produto)
             produto.parentElement.nextElementSibling.children[1].value = ''
             valorTotal.value = parseFloat(valorTotal.value) + parseFloat(valorParcial.value)
             valorParcial.value = 0
         }
-
-    });
     dataBase.pedido = boxPedidos.textContent
 }
 function enviarFormulario(event) {
@@ -88,10 +85,7 @@ quantidadeMaquinas.addEventListener("click", () => { calculaValorCompra('maquina
 maquinas.addEventListener('click', () => { resetaValorMudado('maquinas') })
 capsulas.addEventListener('click', () => { resetaValorMudado('capsulas') })
 
-// quantidadeMaquinas.addEventListener('click',()=>{resetaQTD('maquinas', maquinas, quantidadeMaquinas)})
-// quantidadeCapsulas.addEventListener("click", () => {resetaQTD('capsulas', capsulas, quantidadeCapsulas) })
+botaoAdd.forEach((element)=>element.addEventListener('click', incluirProdutos))
 
-
-// botaoIncluir.addEventListener('click', incluirProdutos)
 botaoEnviar.addEventListener('click', (event) => { enviarFormulario(event) })
 
