@@ -7,23 +7,10 @@ const maquina= {
     "LOV": { "page":"modal4", "nome":"LOV", "preço": "R$ 400,00","capsulas": "Três Corações" }
 }
 
-// function criaModal(event){
-//     window.open('../html/modal.html',"Tipo","location=center,status=no,width=250,height=200");
-//     maquinaSelecionada=maquina[event.target.innerHTML];
-
-//     let modal = document.querySelector('.modal')
-//     modal.innerHTML= `<h1 class="title">${maquina.nome}</h1>
-//     <img src="" class="img" alt="imagem da cafeteira selecionada">
-//     <p class="capsula">${maquina.capsulas}</p>
-//     <p class="Preço">${maquina.preço}</p>
-//     <button class="fechar">Fechar</button>`  
-
-// }
-
 function entraModal(event){
     
     maquinaSelecionada=maquina[event.target.innerHTML];
-    window.open(`../html/${maquinaSelecionada.page}.html`,"Tipo","location=center,status=no,width=250,height=300");
+    window.open(`../html/${maquinaSelecionada.page}.html`,"Tipo","location=center,status=no,width=250,height=350");
     
 }
 

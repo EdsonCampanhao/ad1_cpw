@@ -38,3 +38,10 @@
     width: 60px;
     height: 60px;
 }
+.link{
+    cursor: pointer;
+}
+.link:hover{
+    color: #cc0000;
+    text-decoration: underline;
+}

@@ -41,7 +41,7 @@
                 <fieldset>
                     <legend>Seleção de produtos e lista de compras</legend>
                     <div class="linhaForm">
-                        <div class="containerProdutos">
+                        <div class="containerProdutos" >
                             <label for="maquinas" class=" LabBoxSel">Máquinas</label>
                             <select  id="maquinas" >
                                 <optgroup label="Dolce Gusto">
@@ -60,10 +60,11 @@
                         <div class="containerQtd">
                             <label for="QTD"  >Qtd</label>
                             <input name="QTD" id="QTD_maquinas" type="number" >
+                            <button class="Container__QTD__add">+</button>
                         </div>
                     </div>
                     <div class="linhaForm">
-                        <div class="containerProdutos">
+                        <div class="containerProdutos" >
                             <label for="capsulas" >Cápsulas</label>
                             <select  id="capsulas">
                                 <optgroup label="tipo Dolce Gusto">
@@ -83,14 +84,16 @@
                         <div class="containerQtd">
                             <label for="QTD">Qtd</label>
                             <input name="QTD"  id="QTD_capsulas" type="number">
+                            <button class="Container__QTD__add">+</button>
                         </div>
                     </div>
                     <div class="linhaAction">
                         <div class="linhaAction_valueField">
-                            <label for="valorParcial" >Valor parcial da compra: R$</label>
+                        <label for="valorParcial" >Valor x QTD: R$</label>
                             <input id="valorParcial" readonly value=0 type="number">
+                            
                         </div>
-                        <button class="incluirProdutos" id="incluirProdutos" >Incluir Produtos</button>
+                      
                     </div>
                     <textarea name="" id="boxPedidos" cols="30" class="boxPedidos" rows="8"></textarea>
                     <div class="linhaForm">
@@ -101,7 +104,7 @@
                     </div>
                 </fieldset>
                 <div class="botoes">
-                    <button type="submit" id="submit">Continuar</button>
+                    <button type="submit" id="submit">Comprar</button>
                     <button>Limpar</button>
                 </div>
             </form>
