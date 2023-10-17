@@ -1,29 +1,20 @@
-
-.titulo{
-    text-align: center;
+.link{
+cursor: pointer;
 }
 .listaMaq{
     width:340px;
     color: #402020;
     background-color: #eeddcc;
-    padding: 10px 10px 10px 50px;
+    padding: 24px 10px 24px 50px;
     border: #402020 solid 2px;
-    margin: 0 auto 10px auto;
+    
     list-style: upper-roman;
-}
-.listaMaq ul{
-    margin-top: 0;
-    line-height: 175%;
-    color: #402020;
-    list-style: square;
-    padding: 0;
-}
-.listaMaq ul li{
-    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
     
 }
-.preco{
-    color: #cc0000;
-}
+
 
 

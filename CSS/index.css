@@ -36,7 +36,9 @@ a:visited{
     color: #603030;
 }
 section { 
-    display:block; width: 70%; float: right; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .apres{
    text-align: center;
