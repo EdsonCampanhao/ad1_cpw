@@ -63,10 +63,10 @@ function incluirProdutos(event) {
         if (quantidade(produtoSelecionado) == '') {
             return alert('nenhum produto selecionado!')
         }
-        else if (produto.value != '') {
-            boxPedidos.textContent = boxPedidos.textContent + `${produto.value} (${produto.parentElement.nextElementSibling.children[1].value}) R$ ${valorParcial.value}  \n`
-            produto.selectedIndex = 0
-            produto.parentElement.nextElementSibling.children[1].value = ''
+        else if (produtoSelecionado.value != '') {
+            boxPedidos.textContent = boxPedidos.textContent + `${produtoSelecionado.value} (${produtoSelecionado.parentElement.nextElementSibling.children[1].value}) R$ ${valorParcial.value}  \n`
+            produtoSelecionado.selectedIndex = 0
+            produtoSelecionado.parentElement.nextElementSibling.children[1].value = ''
             valorTotal.value = parseFloat(valorTotal.value) + parseFloat(valorParcial.value)
             valorParcial.value = 0
         }
@@ -78,12 +78,19 @@ function enviarFormulario(event) {
         return alert('selecione pelo menos 1 produto!')
     }
 }
+function apagaQtd(produto){
+   produto.value=''
+   resetaValorMudado(produto)
+}
 
 quantidadeCapsulas.addEventListener("click", () => { calculaValorCompra('capsulas', capsulas, quantidadeCapsulas) })
 quantidadeMaquinas.addEventListener("click", () => { calculaValorCompra('maquinas', maquinas, quantidadeMaquinas) })
 
 maquinas.addEventListener('click', () => { resetaValorMudado('maquinas') })
 capsulas.addEventListener('click', () => { resetaValorMudado('capsulas') })
+
+quantidadeMaquinas.addEventListener("keyup",()=>{apagaQtd(quantidadeMaquinas)})
+quantidadeCapsulas.addEventListener("keyup",()=>{apagaQtd(quantidadeCapsulas)})
 
 botaoAdd.forEach((element)=>element.addEventListener('click', incluirProdutos))
 
